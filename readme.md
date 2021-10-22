@@ -1,4 +1,4 @@
-# Circular positioning of elements
+# Solar System in Godot
 
 Example with a solar system animated:
 

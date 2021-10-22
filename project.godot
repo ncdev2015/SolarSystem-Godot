@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="CircularPositioningOfElements"
+config/name="SolarSystem-Godot"
 run/main_scene="res://main/main.tscn"
 config/icon="res://icon.png"
 

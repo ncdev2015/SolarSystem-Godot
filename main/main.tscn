@@ -3,12 +3,12 @@
 [ext_resource path="res://assets/sun.png" type="Texture" id=1]
 [ext_resource path="res://main/main.gd" type="Script" id=2]
 
-[node name="main" type="Node2D"]
+[node name="Main" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="sun" type="Sprite" parent="."]
-position = Vector2( 504.595, 294.823 )
-scale = Vector2( 0.093738, 0.0915369 )
+[node name="Sun" type="Sprite" parent="."]
+position = Vector2( 103.259, 335.869 )
+scale = Vector2( 0.0798796, 0.0780039 )
 texture = ExtResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -21,3 +21,29 @@ scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="MercuryPosition" type="Position2D" parent="Positions"]
+position = Vector2( 213.626, 335.175 )
+
+[node name="VenusPosition" type="Position2D" parent="Positions"]
+position = Vector2( 340.182, 329.69 )
+
+[node name="EarthPosition" type="Position2D" parent="Positions"]
+position = Vector2( 471.646, 329.528 )
+
+[node name="MarsPosition" type="Position2D" parent="Positions"]
+position = Vector2( 605.326, 326.988 )
+
+[node name="JupiterPosition" type="Position2D" parent="Positions"]
+position = Vector2( 745.978, 329.528 )
+
+[node name="SaturnPosition" type="Position2D" parent="Positions"]
+position = Vector2( 867.918, 327.947 )
+
+[node name="NeptunePosition" type="Position2D" parent="Positions"]
+position = Vector2( 984.493, 326.833 )
+
+[node name="UranusPosition" type="Position2D" parent="Positions"]
+position = Vector2( 1118.48, 326.521 )

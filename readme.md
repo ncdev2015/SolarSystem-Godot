@@ -9,5 +9,7 @@ To add a planet press space key.
 
 ![Solar System](https://github.com/ncdev2015/CircularPositioningOfElements/blob/master/assets/example_2.png)
 
+To do:
 
-Target: Orbit all planets around the sun.
+- Animate orbit
+- orbit planets with a radial velocity

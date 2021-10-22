@@ -11,5 +11,5 @@ To add a planet press space key.
 
 To do:
 
-- Animate orbit
-- orbit planets with a radial velocity
+- Add orbit
+- Orbit the planets with radial velocity

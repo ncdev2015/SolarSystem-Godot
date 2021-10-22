@@ -23,31 +23,34 @@ __meta__ = {
 [node name="Planets" type="Node2D" parent="."]
 
 [node name="MercuryPosition" type="Position2D" parent="Planets"]
-position = Vector2( 255.384, 400 )
+position = Vector2( 223.643, 333.996 )
 
 [node name="VenusPosition" type="Position2D" parent="Planets"]
-position = Vector2( 401.514, 402 )
+position = Vector2( 339.569, 332.975 )
 
 [node name="EarthPosition" type="Position2D" parent="Planets"]
-position = Vector2( 550.988, 400 )
+position = Vector2( 463.369, 332.485 )
 
 [node name="MarsPosition" type="Position2D" parent="Planets"]
-position = Vector2( 714.945, 400 )
+position = Vector2( 600.143, 337.016 )
 
 [node name="JupiterPosition" type="Position2D" parent="Planets"]
-position = Vector2( 882.02, 400 )
+position = Vector2( 740.034, 341.547 )
 
 [node name="SaturnPosition" type="Position2D" parent="Planets"]
-position = Vector2( 1052.03, 400 )
+position = Vector2( 863.224, 343.057 )
 
 [node name="NeptunePosition" type="Position2D" parent="Planets"]
-position = Vector2( 1213.94, 400 )
+position = Vector2( 993.419, 344.567 )
 
 [node name="UranusPosition" type="Position2D" parent="Planets"]
-position = Vector2( 1391.95, 400 )
+position = Vector2( 1144.25, 346.077 )
 
 [node name="Sun" type="Area2D" parent="."]
-position = Vector2( -248.37, 420 )
+position = Vector2( -270.531, 356.503 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Sun"]
 scale = Vector2( 1.05566, 1.03699 )

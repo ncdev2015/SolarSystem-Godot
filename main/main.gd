@@ -30,7 +30,7 @@ func draw_orbit(radius = 1000):
 	draw_circle_arc($Sun.position, radius, 0, 360, Color(1.0, 0.0, 0.0))
 
 func get_distance_to( pointA, pointB ):
-	return sqrt(pow(pointA.x-pointB.x, 2) + pow(pointA.y-pointB.y, 2))
+	return pointA.distance_to(pointB)
 
 func _ready():
 	planets = [
@@ -46,7 +46,7 @@ func _ready():
 
 func _process(delta):
 	$Sun.rotate(delta * sun_rotation_velocity)
-	update() # for update canvas per every frame
+	update() # for update canvas every frame
 
 func _unhandled_input(event):
 	if event is InputEventKey:

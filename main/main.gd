@@ -4,16 +4,18 @@ var planets: Array
 var positions: Array
 var planets_in_scene: Array
 
-var mercury = preload("res://planets/mercury.tscn")
-var venus = preload("res://planets/venus.tscn")
-var earth = preload("res://planets/earth.tscn")
-var mars = preload("res://planets/mars.tscn")
-var jupiter = preload("res://planets/jupiter.tscn")
-var saturn = preload("res://planets/saturn.tscn")
-var neptune = preload("res://planets/neptune.tscn")
-var uranus = preload("res://planets/uranus.tscn")
+var mercury = preload("res://planets/mercury/mercury.tscn")
+var venus = preload("res://planets/venus/venus.tscn")
+var earth = preload("res://planets/earth/earth.tscn")
+var mars = preload("res://planets/mars/mars.tscn")
+var jupiter = preload("res://planets/jupiter/jupiter.tscn")
+var saturn = preload("res://planets/saturn/saturn.tscn")
+var neptune = preload("res://planets/neptune/neptune.tscn")
+var uranus = preload("res://planets/uranus/uranus.tscn")
 
 var sun_rotation_velocity = 0.1
+
+var angle = 0
 
 func draw_circle_arc(center, radius, angle_from, angle_to, color):
 	var nb_points = 200
@@ -34,15 +36,22 @@ func get_distance_to( pointA, pointB ):
 
 func _ready():
 	planets = [
-		{ "planet": mercury, "position": $Postions/Mercury },
-		{ "planet": venus, "position": $Postions/Venus },
-		{ "planet": earth, "position": $Postions/Earth },
-		{ "planet": mars, "position": $Postions/Mars },
-		{ "planet": jupiter, "position": $Postions/Jupiter },
-		{ "planet": saturn, "position": $Postions/Saturn },
-		{ "planet": neptune, "position": $Postions/Neptune },
-		{ "planet": uranus, "position": $Postions/Uranus }
+		{ "planet": mercury, "position": $Positions/Mercury, "velocity": 100 },
+		{ "planet": venus, "position": $Positions/Venus, "velocity": 125 },
+		{ "planet": earth, "position": $Positions/Earth, "velocity": 130 },
+		{ "planet": mars, "position": $Positions/Mars, "velocity": 135 },
+		{ "planet": jupiter, "position": $Positions/Jupiter, "velocity": 140 },
+		{ "planet": saturn, "position": $Positions/Saturn, "velocity": 150 },
+		{ "planet": neptune, "position": $Positions/Neptune, "velocity": 160 },
+		{ "planet": uranus, "position": $Positions/Uranus, "velocity": 170 }
 	]
+
+func update_angle(velocity, delta):
+	angle += delta * velocity * 0.1
+	if angle >= 360:
+		angle = 0
+		
+	return angle
 
 func _process(delta):
 	$Sun.rotate(delta * sun_rotation_velocity)
@@ -53,7 +62,7 @@ func _unhandled_input(event):
 		if event.pressed:
 			if event.scancode == KEY_SPACE and not event.echo:
 				var next_planet = get_next_planet()
-				if next_planet["planet"]:
+				if next_planet:
 					add_planet_to_scene(next_planet)
 
 			if event.scancode == KEY_ESCAPE:

@@ -17,30 +17,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Postions" type="Node2D" parent="."]
+[node name="Positions" type="Node2D" parent="."]
 
-[node name="Mercury" type="Position2D" parent="Postions"]
+[node name="Mercury" type="Position2D" parent="Positions"]
 position = Vector2( 227.239, 335.195 )
 
-[node name="Venus" type="Position2D" parent="Postions"]
+[node name="Venus" type="Position2D" parent="Positions"]
 position = Vector2( 344.364, 332.975 )
 
-[node name="Earth" type="Position2D" parent="Postions"]
+[node name="Earth" type="Position2D" parent="Positions"]
 position = Vector2( 468.164, 332.485 )
 
-[node name="Mars" type="Position2D" parent="Postions"]
+[node name="Mars" type="Position2D" parent="Positions"]
 position = Vector2( 602.54, 333.42 )
 
-[node name="Jupiter" type="Position2D" parent="Postions"]
+[node name="Jupiter" type="Position2D" parent="Positions"]
 position = Vector2( 743.63, 335.554 )
 
-[node name="Saturn" type="Position2D" parent="Postions"]
+[node name="Saturn" type="Position2D" parent="Positions"]
 position = Vector2( 869.217, 337.064 )
 
-[node name="Neptune" type="Position2D" parent="Postions"]
+[node name="Neptune" type="Position2D" parent="Positions"]
 position = Vector2( 1000.61, 338.574 )
 
-[node name="Uranus" type="Position2D" parent="Postions"]
+[node name="Uranus" type="Position2D" parent="Positions"]
 position = Vector2( 1131.06, 342.481 )
 
 [node name="Sun" type="Node2D" parent="."]

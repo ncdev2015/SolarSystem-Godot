@@ -85,7 +85,7 @@ func _draw():
 func get_next_planet():
 	return planets.pop_front()
 
-# Return a planet to add in the scene
+# Returns a planet to add in the scene
 func initialize_planet(planetObj):
 	var instance = planetObj["planet"]
 	
@@ -96,11 +96,12 @@ func initialize_planet(planetObj):
 
 	return instance
 
+# Adds a planet instance to scene
 func add_planet(planetInstance):
 	planets_in_scene.append(planetInstance)
 	add_child(planetInstance)
 
-# Add a new planet and instances it from a list of planets
+# Adds a new planet and instances it from a list of planets
 func add_planet_to_scene(planetObj):
 	if (not planetObj):
 		return

@@ -17,4 +17,6 @@ Funcionalities:
 - Each planet orbits the Sun
 - To set the angular velocities, go to the array of planets in the _ready() function
 
+![Solar System](https://github.com/ncdev2015/CircularPositioningOfElements/blob/master/assets/updated.png)
+
 Download and enjoy it!

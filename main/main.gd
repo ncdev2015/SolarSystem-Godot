@@ -86,7 +86,7 @@ func get_next_planet():
 	return planets.pop_front()
 
 # Return a planet to add in the scene
-func initializePlanet(planetObj):
+func initialize_planet(planetObj):
 	var instance = planetObj["planet"]
 	
 	instance.scale = Vector2(.1, .1) # Default scale
@@ -96,7 +96,7 @@ func initializePlanet(planetObj):
 
 	return instance
 
-func addPlanetToScene(planetInstance):
+func add_planet(planetInstance):
 	planets_in_scene.append(planetInstance)
 	add_child(planetInstance)
 
@@ -105,4 +105,4 @@ func add_planet_to_scene(planetObj):
 	if (not planetObj):
 		return
 	
-	addPlanetToScene(initializePlanet(planetObj))	
+	add_planet(initialize_planet(planetObj))

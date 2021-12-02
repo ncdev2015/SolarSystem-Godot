@@ -15,9 +15,6 @@ var saturn = preload("res://planets/saturn/saturn.tscn")
 var neptune = preload("res://planets/neptune/neptune.tscn")
 var uranus = preload("res://planets/uranus/uranus.tscn")
 
-# Current angle
-var sun_angle = 0
-
 # Sun angular velocity
 var sun_rotation_velocity = 0.1
 
@@ -49,25 +46,35 @@ func _ready():
 		{ "planet": earth.instance(), "position": $Positions/Earth, "angularVelocity": 130, "currentAngle": 0 },
 		{ "planet": mars.instance(), "position": $Positions/Mars, "angularVelocity": 135, "currentAngle": 0 },
 		{ "planet": jupiter.instance(), "position": $Positions/Jupiter, "angularVelocity": 140, "currentAngle": 0 },
-		{ "planet": saturn.instance(), "position": $Positions/Saturn, "angularVelocity": 150, "currentAngle": 0 },
-		{ "planet": neptune.instance(), "position": $Positions/Neptune, "angularVelocity": 160, "currentAngle": 0 },
-		{ "planet": uranus.instance(), "position": $Positions/Uranus, "angularVelocity": 170, "currentAngle": 0 }
+		{ "planet": saturn.instance(), "position": $Positions/Saturn, "angularVelocity": 130, "currentAngle": 0 },
+		{ "planet": neptune.instance(), "position": $Positions/Neptune, "angularVelocity": 120, "currentAngle": 0 },
+		{ "planet": uranus.instance(), "position": $Positions/Uranus, "angularVelocity": 100, "currentAngle": 0 }
 	]
 
-# Loop process
+# Main loop
 func _process(delta):
-	$Sun.rotate(delta * sun_rotation_velocity)
+	$Sun.rotate(delta * sun_rotation_velocity)	
+
+	# Update angular position of each planet
+	for planet in planets_in_scene:
+
+		var r = planet.distanceToCenter
+
+		planet.currentTime += delta
+
+		planet.position.x = r * cos(deg2rad( planet.angularVelocity * planet.currentTime)) + $Sun.position.x
+		planet.position.y = -r * sin(deg2rad( planet.angularVelocity * planet.currentTime)) + $Sun.position.y
+
 	update() # for update canvas every frame
 
-# Manage key inputs
+# Manages key inputs
 func _unhandled_input(event):
-	if event is InputEventKey:
-		if event.pressed:
-			if event.scancode == KEY_SPACE and not event.echo:
-				add_planet_to_scene(get_next_planet())
+	if event is InputEventKey and event.pressed:		
+		if event.scancode == KEY_SPACE and not event.echo:
+			add_planet_to_scene(get_next_planet())
 
-			if event.scancode == KEY_ESCAPE:
-				get_tree().quit()
+		if event.scancode == KEY_ESCAPE:
+			get_tree().quit()
 
 # Necessary to draw primitives (arcs, circles, lines etc) on the canvas
 func _draw():
@@ -84,6 +91,8 @@ func initializePlanet(planetObj):
 	
 	instance.scale = Vector2(.1, .1) # Default scale
 	instance.position = planetObj["position"].position
+	instance.angularVelocity = planetObj["angularVelocity"]
+	instance.distanceToCenter = get_distance_to(instance.position, $Sun.position)
 
 	return instance
 

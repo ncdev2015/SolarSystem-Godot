@@ -12,7 +12,9 @@ To add a planet press space key, It add a new planet to scene with a orbit.
 
 ![Solar System](https://github.com/ncdev2015/CircularPositioningOfElements/blob/master/assets/example_2.png)
 
-To do:
+Funcionalities:
+- Pressing the SPACE key adds a new planet
+- Each planet orbits the Sun
+- To set the angular velocities, go to the array of planets in the _ready() function
 
-- Orbit the planets around the Sun
-- Add scales to planets, orbitals and velocities
+Download and enjoy it!

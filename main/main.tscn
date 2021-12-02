@@ -7,11 +7,11 @@
 script = ExtResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 7.20001
-margin_top = 8.8
-margin_right = 472.2
-margin_bottom = 29.8
-text = "By pressing Space Key it will add a new planet to orbit around the sun"
+margin_left = 65.1084
+margin_top = 14.1454
+margin_right = 530.108
+margin_bottom = 35.1454
+text = "By pressing Space Key it will add a new planet to orbit around the Sun"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false

@@ -20,3 +20,5 @@ Funcionalities:
 ![Solar System](https://github.com/ncdev2015/CircularPositioningOfElements/blob/master/assets/updated.png)
 
 Download and enjoy it!
+
+Thanks for your interest in Godot projects.

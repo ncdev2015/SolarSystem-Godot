@@ -41,14 +41,14 @@ func get_distance_to( pointA, pointB ):
 # Where the script starts
 func _ready():
 	planets = [
-		{ "planet": mercury.instance(), "position": $Positions/Mercury, "angularVelocity": 100, "currentAngle": 0 },
-		{ "planet": venus.instance(), "position": $Positions/Venus, "angularVelocity": 125, "currentAngle": 0 },
-		{ "planet": earth.instance(), "position": $Positions/Earth, "angularVelocity": 130, "currentAngle": 0 },
-		{ "planet": mars.instance(), "position": $Positions/Mars, "angularVelocity": 135, "currentAngle": 0 },
-		{ "planet": jupiter.instance(), "position": $Positions/Jupiter, "angularVelocity": 140, "currentAngle": 0 },
-		{ "planet": saturn.instance(), "position": $Positions/Saturn, "angularVelocity": 130, "currentAngle": 0 },
-		{ "planet": neptune.instance(), "position": $Positions/Neptune, "angularVelocity": 120, "currentAngle": 0 },
-		{ "planet": uranus.instance(), "position": $Positions/Uranus, "angularVelocity": 100, "currentAngle": 0 }
+		{ "planet": mercury.instance(), "position": $Positions/Mercury, "angularVelocity": 100},
+		{ "planet": venus.instance(), "position": $Positions/Venus, "angularVelocity": 125},
+		{ "planet": earth.instance(), "position": $Positions/Earth, "angularVelocity": 130},
+		{ "planet": mars.instance(), "position": $Positions/Mars, "angularVelocity": 135},
+		{ "planet": jupiter.instance(), "position": $Positions/Jupiter, "angularVelocity": 140},
+		{ "planet": saturn.instance(), "position": $Positions/Saturn, "angularVelocity": 130},
+		{ "planet": neptune.instance(), "position": $Positions/Neptune, "angularVelocity": 120},
+		{ "planet": uranus.instance(), "position": $Positions/Uranus, "angularVelocity": 100}
 	]
 
 # Main loop

@@ -1,22 +1,22 @@
 # Solar System in Godot
 
-Example to view how to add elements in a position and animate them with GDScript code:
+This example uses 2D position node and animate it addng movement with GDScript and Physics formula:
 
-In this project we make a Solar System with orbitals and spin velocities around the Sun.
+This is useful to learn rotation and angular (algebra) concepts.
 
-First image:
+First sample:
 
 ![Solar System](https://github.com/ncdev2015/CircularPositioningOfElements/blob/master/assets/example_1.png)
 
-To add a planet press space key, It adds a new planet to scene with a orbit.
+By pressing SPACE key adds a new planet to scene and this start with spining.
 
 ![Solar System](https://github.com/ncdev2015/CircularPositioningOfElements/blob/master/assets/example_2.png)
 
-And the planets start moving:
+Second sample (planets with movement)
 
 ![Solar System](https://github.com/ncdev2015/CircularPositioningOfElements/blob/master/assets/updated.png)
 
-Funcionalities:
-- Pressing the SPACE key adds a new planet
-- Each planet orbits the Sun
-- To set the angular velocities, go to the array of planets in the _ready() function and modify them
+Considerations:
+- By pressing the SPACE key it adds a new planet
+- The center of each planet is the Sun
+- Modify angular velocities to increase o decrease spin velocity

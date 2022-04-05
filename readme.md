@@ -1,6 +1,6 @@
 # Solar System in Godot
 
-This example uses 2D position node and animate it addng movement with GDScript and Physics formula:
+This example uses 2D position node and animate it adding movement with GDScript and Physics formula:
 
 This is useful to learn rotation and angular (algebra) concepts.
 
